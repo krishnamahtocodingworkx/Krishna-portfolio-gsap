@@ -5,6 +5,7 @@ import Image from "next/image";
 import Navbar from "../ui/Navbar";
 import Skills from "./Skills";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 const icons = ["/email.svg", "/linkedin.svg", "/github.svg", "/leetcode.png"];
 const HomeClient = () => {
@@ -87,6 +88,7 @@ const HomeClient = () => {
       <Skills />
       <div className="w-full h-screen bg-gray-900"></div>
       <Contact />
+      <Footer />
     </main>
   );
 };
