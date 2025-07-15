@@ -65,3 +65,13 @@ body {
   text-wrap: none;
   /* z-index: 99999; */
 }
+
+@layer utilities {
+  .header {
+    @apply text-background uppercase font-bold text-xl tracking-[3px];
+  }
+
+  .description {
+    @apply text-center text-sm font-extralight font-open-sans;
+  }
+}

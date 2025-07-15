@@ -4,6 +4,10 @@ import React, { useEffect, useRef } from "react";
 const navLinks = ["About Me", "Skills", "Projects", "Contact Me"];
 const Navbar = () => {
   const navLinkRef = useRef<HTMLSpanElement[]>([]);
+  const navbarRef = useRef<HTMLDivElement>(null);
+
+  const [showNavbar, setShowNavbar] = React.useState(true);
+  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
     gsap.fromTo(
@@ -21,17 +25,34 @@ const Navbar = () => {
         clearProps: "all",
       }
     );
-    // gsap.from(navLinkRef.current, {
-    //   y: 100,
-    //   delay: 0.4,
-    //   opacity: 0,
-    //   duration: 0.4,
-    //   ease: "power2.out",
-    //   stagger: 0.1,
-    // });
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollYRef.current && currentScrollY > 50) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+
+      lastScrollYRef.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
   return (
-    <nav className="fixed w-full flex justify-between items-center px-40 py-10  text-white">
+    <nav
+      ref={navbarRef}
+      className={`z-50  w-full flex justify-between items-center px-40 py-10 fixed top-0 left-0 transition-transform duration-300 ease-in-out ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="overflow-hidden">
         <div
           ref={(el) => {

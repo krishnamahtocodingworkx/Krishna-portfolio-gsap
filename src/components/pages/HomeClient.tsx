@@ -1,17 +1,17 @@
 "use client";
 import React from "react";
-import Navbar from "./Navbar";
 import useLenis from "@/utils/useLenis";
 import Image from "next/image";
+import Navbar from "../ui/Navbar";
+import Skills from "./Skills";
+import Contact from "./Contact";
 
 const icons = ["/email.svg", "/linkedin.svg", "/github.svg", "/leetcode.png"];
 const HomeClient = () => {
   useLenis();
   return (
     <main className="w-full h-full flex flex-col">
-      <div className="z-50">
-        <Navbar />
-      </div>
+      <Navbar />
       {/* hero section */}
       <div className="w-full h-screen flex overflow-hidden">
         <div className="md:w-[60%] bg-gray-background h-full pt-60 pl-40 font-raleway text-background flex flex-col gap-10">
@@ -50,17 +50,16 @@ const HomeClient = () => {
           </div>
         </div>
       </div>
-
-      {/* IT BERRIES section */}
-      <div className="flex ">
+      {/* about section */}
+      <div className="flex items-stretch w-full relative overflow-hidden">
         <div
           className="bg-light-black md:w-10/12 w-full
-        md:px-30 px-10 md:pr-50 py-10 flex flex-col md:items-start items-center md:gap-6 gap-8 h-fit"
+    md:px-20 px-10 md:pr-50 py-10 flex flex-col md:items-start items-center md:gap-6 gap-8"
         >
-          <h1 className="font-montserrat font-bold text-3xl  tracking-widest">
+          <h1 className="font-montserrat font-bold text-3xl tracking-widest">
             IT BERRIES
           </h1>
-          <p className="font-open-sans text-sm text-justify  ">
+          <p className="font-open-sans text-sm text-justify">
             Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem
             varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna
             quis libero viverra facilisis ut ac est. Morbi commodo, eros in
@@ -74,11 +73,20 @@ const HomeClient = () => {
             READ MORE
           </button>
         </div>
-        <div className="bg-foreground w-2/12 h-full md:block hidden">x</div>
+        <div className="absolute -right-10">
+          <Image
+            src="/Logo ITB.svg"
+            alt="ITB Logo"
+            width={500}
+            height={700} // <-- adjust this to the expected natural content height
+            className="object-contain "
+          />
+        </div>
+        <div className="bg-foreground w-2/12 flex justify-center items-start"></div>
       </div>
-
-      <div className="w-full h-screen bg-gray-background"></div>
+      <Skills />
       <div className="w-full h-screen bg-gray-900"></div>
+      <Contact />
     </main>
   );
 };
