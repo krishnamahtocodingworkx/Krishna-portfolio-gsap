@@ -10,28 +10,34 @@
 
   --foreground: #ffffff;
   --background: #000000;
-  --gray: #d7d7d7;
+  --gray-background: #d7d7d7;
   --gray-dark: #c4c4c4;
   --light-black: #1d1d1d;
   --light-bold-text: #050505;
+  --gray: #909090;
+  /* 909090 */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-gray-background: var(--gray-background);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-montserrat: var(--font-montserrat);
   --font-raleway: var(--font-raleway);
   --font-open-sans: var(--font-open-sans);
+  --color-gray: var(--gray);
+  --color-gray-btn: var(--gray-dark);
+  --color-light-black: var(--light-black);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -52,10 +58,10 @@ body {
 }
 
 .nav-link {
-  /* text-2xl md:text-4xl font-raleway font-semibold tracking-tight */
   font-family: var(--font-montserrat);
   font-size: 1rem;
   font-weight: 600;
   color: var(--foreground);
   text-wrap: none;
+  /* z-index: 99999; */
 }

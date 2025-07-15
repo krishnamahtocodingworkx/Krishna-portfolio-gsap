@@ -15,18 +15,35 @@ const Navbar = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
+        duration: 0.2,
         ease: "power3.out",
-        stagger: 0.2,
+        stagger: 0.1,
         clearProps: "all",
       }
     );
+    // gsap.from(navLinkRef.current, {
+    //   y: 100,
+    //   delay: 0.4,
+    //   opacity: 0,
+    //   duration: 0.4,
+    //   ease: "power2.out",
+    //   stagger: 0.1,
+    // });
   }, []);
   return (
-    <nav className="fixed w-full flex justify-between items-center px-60 py-10  text-white">
-      <div className="flex items-center gap-0.5 font-raleway">
-        <span className="font-semibold text-2xl">K</span>
-        <span className=" text-lg font-light">rishna</span>
+    <nav className="fixed w-full flex justify-between items-center px-40 py-10  text-white">
+      <div className="overflow-hidden">
+        <div
+          ref={(el) => {
+            if (el) navLinkRef.current[0] = el;
+          }}
+          className="flex items-center gap-0.5 font-raleway text-background"
+        >
+          <span className="font-bold text-3xl">K</span>
+          <span className="nav-link" style={{ color: "black" }}>
+            rishna
+          </span>
+        </div>
       </div>
       <div className="flex justify-center items-center gap-10 overflow-hidden">
         {navLinks.map((link, index) => (
@@ -34,7 +51,7 @@ const Navbar = () => {
             key={index}
             ref={(el) => {
               if (el) {
-                navLinkRef.current[index] = el;
+                navLinkRef.current[index + 1] = el;
               }
             }}
             className="cursor-pointer hover:text-gray-300 transition-colors duration-300 nav-link"
