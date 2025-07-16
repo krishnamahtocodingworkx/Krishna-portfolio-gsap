@@ -1,0 +1,48 @@
+"use client";
+import { icons } from "@/utils/constants";
+import Image from "next/image";
+import React from "react";
+
+const Hero = () => {
+  return (
+    <div className="w-full h-screen flex overflow-hidden">
+      <div className="md:w-[60%] bg-gray-background h-full pt-60 pl-40 font-raleway text-background flex flex-col gap-10">
+        <h2 className="font-bold text-4xl ">Hi, I am</h2>
+        <div className="flex flex-col  ">
+          <h1 className="font-bold text-6xl ">Krishna Mahto</h1>
+          <p className="font-semibold text-sm text-gray">
+            Software Engineer / FullStack Developer
+          </p>
+        </div>
+        <div className="flex gap-5">
+          {icons.map((icon: string, index: number) => {
+            return (
+              <span
+                key={index}
+                className="h-10 w-10 bg-gray-btn shadow-2xl flex justify-center items-center rounded-full"
+              >
+                <Image src={icon} height={25} width={25} alt="social icon" />
+              </span>
+            );
+          })}
+        </div>
+      </div>
+      <div className="md:w-[40%] bg-background h-full">
+        <div className="relative">
+          <div className="absolute  w-50 h-[105vh] top-0 -left-20 rotate-[10deg] bg-background" />
+        </div>
+        <div className="h-full w-full flex items-end">
+          <Image
+            src={"/user-pic.svg"}
+            alt="User Picture"
+            width={500}
+            height={500}
+            className="w-[80%] h-[80%] object-cover z-20"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
