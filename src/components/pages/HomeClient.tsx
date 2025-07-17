@@ -13,17 +13,15 @@ const HomeClient = () => {
   useLenis();
   return (
     <main className="w-full h-full flex flex-col">
-      <Navbar />
+      {/* <Navbar /> */}
       {/* hero section */}
       <Hero />
       {/* about section */}
-      <About />
-      <Skills />
-      <Experience />
-      <div className="w-full h-screen bg-gray-900"></div>
-
-      <Contact />
-      <Footer />
+      {/* <About /> */}
+      {/* <Skills /> */}
+      {/* <Experience /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </main>
   );
 };
