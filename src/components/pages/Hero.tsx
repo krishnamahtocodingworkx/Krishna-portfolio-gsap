@@ -65,7 +65,17 @@ const Hero = () => {
           {icons.map((icon: string, index: number) => {
             return (
               <span key={index} className="hero-icon">
-                <Image src={icon} height={25} width={25} alt="social icon" />
+                <Image
+                  src={icon}
+                  height={25}
+                  width={25}
+                  alt="social icon"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "/fallback-icon.svg"; // Fallback icon path
+                    target.alt = "Fallback Icon"; // Set a fallback alt text
+                  }}
+                />
               </span>
             );
           })}
@@ -95,7 +105,9 @@ const Hero = () => {
         </div>
         <div className="hero-image-wrapper">
           <Image
-            src={"/user-pic.svg"}
+            // src={"/user-pic.svg"}
+            // src={"/krishna-profile.png"}
+            src={"/krishna-profile-removebg-preview.png"}
             alt="User Picture"
             width={500}
             height={500}

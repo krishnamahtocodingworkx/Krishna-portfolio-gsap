@@ -50,7 +50,7 @@ export const expCards: ExperienceCard[] = [
 
 export const icons = [
   "/email.svg",
-  "/linkedin.svg",
+  "/linkedin.png",
   "/github.svg",
   "/leetcode.png",
 ];
