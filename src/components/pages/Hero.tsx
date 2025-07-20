@@ -60,6 +60,9 @@ const Hero = () => {
         <div className="hero-name-container">
           <h1 className="hero-heading">Krishna Mahto</h1>
           <p className="hero-title">Software Engineer / FullStack Developer</p>
+          <p className="text-xs text-amber-800 font-medium italic z-50">
+            Portfolio under development
+          </p>
         </div>
         <div className="hero-icons">
           {icons.map((icon: string, index: number) => {

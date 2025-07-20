@@ -165,7 +165,7 @@
     /* background-color: var(--background); */
     background: var(--gray-background);
     z-index: 1;
-    border: 1px solid green;
+    /* border: 1px solid green; */
   }
   .mobile-skew-container-overlay {
     position: relative;
@@ -176,7 +176,7 @@
     height: 250px;
     width: 140%; */
     /* right: -50; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     z-index: 99;
     background: #00000050;
@@ -185,7 +185,7 @@
     top: -155;
     right: -50;
     width: 150vw;
-    height: 30vw;
+    height: 80vw;
   }
 
   .mobile-hero-icons {
