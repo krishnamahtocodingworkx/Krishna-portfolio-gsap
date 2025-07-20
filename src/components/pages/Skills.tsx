@@ -7,7 +7,7 @@ const usingNowSkills: { name: string; icon: string }[] = [
   { name: "CSS", icon: "/css.svg" },
   { name: "Javascript", icon: "/js.svg" },
   { name: "TypeScript", icon: "/typescript.svg" },
-  { name: "React", icon: "/react.svg" },
+  { name: "React", icon: "/re.svg" },
   { name: "Next", icon: "/next-js.svg" },
   { name: "Tailwind CSS", icon: "/tailwind.svg" },
   { name: "gsap", icon: "/gsap.svg" },

@@ -2,6 +2,7 @@
 
 import { projects } from "@/utils/constants";
 import { PinContainer } from "../ui/3dPin";
+import Image from "next/image";
 
 const RecentProjects = () => {
   return (
@@ -17,8 +18,8 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+              title="/krishnamahto.vercel.app"
+              href="/krishnamahto.vercel.app"
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
@@ -67,7 +68,14 @@ const RecentProjects = () => {
                   <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                     Check Live Site
                   </p>
-                  {/* <FaLocationArrow className="ms-3" color="#CBACF9" /> */}
+                  <Image
+                    src={"/Arrow.svg"}
+                    height={10}
+                    width={10}
+                    color="#cbacf9"
+                    className="mx-2"
+                    alt="arrow"
+                  />
                 </div>
               </div>
             </PinContainer>
