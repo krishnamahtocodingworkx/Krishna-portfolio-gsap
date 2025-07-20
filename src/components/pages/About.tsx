@@ -8,22 +8,26 @@ const About = () => {
         className="bg-light-black md:w-10/12 w-full
     md:px-20 px-10 md:pr-50 py-10 flex flex-col md:items-start items-center md:gap-6 gap-8"
       >
-        <h1 className="font-montserrat font-bold text-3xl tracking-widest">
+        {/* <h1 className="font-montserrat font-bold text-3xl tracking-widest z-10">
           IT BERRIES
+        </h1> */}
+        <h1 className="font-montserrat font-bold text-3xl tracking-widest z-10">
+          CREATING MODERN DIGITAL EXPERIENCES
         </h1>
-        <p className="font-open-sans text-sm text-justify">
-          Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem
-          varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna
-          quis libero viverra facilisis ut ac est. Morbi commodo, eros in
-          dignissim tempus, lacus odio rutrum augue, in semper sem magna quis
-          tellus. Etiam enim erat, suscipit eu semper a, dictum sit amet elit.
-          Nunc egestas nisi eget enim gravida facilisis. Pellentesque laoreet
-          varius turpis vel pharetra. Ut ante justo, consequat vitae elementum
-          tempor, accumsan nec eros.
+
+        <p className="font-open-sans text-sm text-justify z-10">
+          Hi, I’m Krishna 👋 — a full-stack developer who loves crafting
+          seamless user experiences and solving real-world problems through
+          code. With expertise in React, Node.js, and TypeScript, I enjoy
+          turning ideas into performant, maintainable applications. Whether
+          it&apos;s building responsive UIs or designing RESTful APIs, I focus
+          on writing clean, efficient, and scalable code. I&apos;m constantly
+          exploring new tools, frameworks, and best practices to grow as a
+          developer and deliver high-quality software.
         </p>
-        <button className="font-montserrat uppercase border-l-2 border-r-2 px-5 font-semibold cursor-pointer">
+        {/* <button className="font-montserrat uppercase border-l-2 border-r-2 px-5 font-semibold cursor-pointer">
           READ MORE
-        </button>
+        </button> */}
       </div>
       <div className="absolute -right-10">
         <Image
@@ -34,7 +38,7 @@ const About = () => {
           className="object-contain "
         />
       </div>
-      <div className="bg-foreground w-2/12 flex justify-center items-start"></div>
+      <div className="bg-foreground md:w-2/12 flex justify-center items-start"></div>
     </div>
   );
 };

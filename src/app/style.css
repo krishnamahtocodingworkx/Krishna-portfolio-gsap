@@ -154,38 +154,45 @@
   }
   .mobile-skew {
     position: absolute;
-    top: -150;
-    right: 0;
+    top: -145;
+    right: -50;
     /* left: -5vw; */
-    width: 130%;
-    height: 100px;
+    width: 150vw;
+    height: 30vw;
     /* bottom: 0;
     left: 0; */
     transform: rotate(-15deg);
     /* background-color: var(--background); */
     background: var(--gray-background);
     z-index: 1;
+    border: 1px solid green;
   }
   .mobile-skew-container-overlay {
     position: relative;
     display: inline;
   }
   .mobile-skew-overlay {
-    position: absolute;
+    /* position: absolute;
     height: 250px;
-    width: 140%;
-    background: #00000050;
-    top: -166;
-    right: -50;
-    transform: rotate(-15deg);
+    width: 140%; */
+    /* right: -50; */
+    border: 1px solid red;
+    
     z-index: 99;
+    background: #00000050;
+    transform: rotate(-15deg);
+    position: absolute;
+    top: -155;
+    right: -50;
+    width: 150vw;
+    height: 30vw;
   }
 
   .mobile-hero-icons {
     display: inline;
     position: relative;
   }
-  .mobil-hero-icons-container{
+  .mobil-hero-icons-container {
     position: absolute;
     bottom: 100;
     right: -100;

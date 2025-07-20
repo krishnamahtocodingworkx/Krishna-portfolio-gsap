@@ -16,30 +16,30 @@ const Contact = () => {
       <form className="w-full flex flex-col gap-10 justify-center items-center">
         <input
           type="text"
-          className="border-l-4 border-b-4 border-transparent border-l-black border-b-black outline-none  p-3 w-2/3 uppercase text-[#8B8B8B] font-semibold hover:border-b-blue-500 hover:border-l-blue-500 transition
+          className="border-l-4 border-b-4 border-transparent border-l-black border-b-black outline-none  p-3 md:w-2/3 w-full uppercase text-[#8B8B8B] font-semibold hover:border-b-blue-500 hover:border-l-blue-500 transition
  focus:border-b-blue-500 focus:border-l-blue-500"
           placeholder="Enter your email*"
         />
 
         <input
           type="text"
-          className="border-l-4 border-b-4 border-transparent border-l-black border-b-black outline-none  p-3 w-2/3 uppercase text-[#8B8B8B] font-semibold hover:border-b-blue-500 hover:border-l-blue-500 transition
+          className="border-l-4 border-b-4 border-transparent border-l-black border-b-black outline-none  p-3 md:w-2/3 w-full uppercase text-[#8B8B8B] font-semibold hover:border-b-blue-500 hover:border-l-blue-500 transition
  focus:border-b-blue-500 focus:border-l-blue-500"
           placeholder="Enter your email*"
         />
         <input
           type="text"
-          className="border-l-4 border-b-4 border-transparent border-l-black border-b-black outline-none  p-3 w-2/3 uppercase text-[#8B8B8B] font-semibold hover:border-b-blue-500 hover:border-l-blue-500 transition
+          className="border-l-4 border-b-4 border-transparent border-l-black border-b-black outline-none  p-3 md:w-2/3 w-full uppercase text-[#8B8B8B] font-semibold hover:border-b-blue-500 hover:border-l-blue-500 transition
  focus:border-b-blue-500 focus:border-l-blue-500"
           placeholder="Enter your email*"
         />
         <textarea
           placeholder="Enter your message"
-          className="border-l-4 border-b-4 border-transparent border-l-black border-b-black outline-none  p-3 w-2/3 uppercase text-[#8B8B8B] font-semibold hover:border-b-blue-500 hover:border-l-blue-500 transition
+          className="border-l-4 border-b-4 border-transparent border-l-black border-b-black outline-none  p-3 md:w-2/3 w-full uppercase text-[#8B8B8B] font-semibold hover:border-b-blue-500 hover:border-l-blue-500 transition
  focus:border-b-blue-500 focus:border-l-blue-500"
         />
         <button className="font-montserrat uppercase border-l-2 border-r-2 px-5 font-semibold cursor-pointer">
-          READ MORE
+          SUBMIT 📮
         </button>
       </form>
     </div>

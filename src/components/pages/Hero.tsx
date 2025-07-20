@@ -107,7 +107,8 @@ const Hero = () => {
           <Image
             // src={"/user-pic.svg"}
             // src={"/krishna-profile.png"}
-            src={"/krishna-profile-removebg-preview.png"}
+            // src={"/krishna-profile-removebg-preview.png"}
+            src={"/profile-pic.png"}
             alt="User Picture"
             width={500}
             height={500}

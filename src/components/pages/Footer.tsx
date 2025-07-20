@@ -24,7 +24,7 @@ export const socialMedia = [
 const Footer = () => {
   return (
     <footer
-      className="w-full pt-20 pb-10 px-20 relative overflow-hidden"
+      className="w-full pt-20 pb-10 md:px-20 px-5 relative overflow-hidden"
       id="contact"
     >
       {/* background grid */}
