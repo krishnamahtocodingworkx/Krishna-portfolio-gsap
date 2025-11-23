@@ -14,7 +14,7 @@ const usingNowSkills: { name: string; icon: string }[] = [
 ];
 const Skills = () => {
   return (
-    <div className="w-full h-full flex flex-col gap-10 items-center justify-center bg-gray-background md:px-[20vw] px-10 py-20">
+    <div id="skills" className="w-full h-full flex flex-col gap-10 items-center justify-center bg-gray-background md:px-[20vw] px-10 py-20">
       <HeadingButton text="Skills" />
       <SkillCard heading="Using now:" usingNowSkills={usingNowSkills} />
       <SkillCard

@@ -48,7 +48,7 @@
 // export default Hero;
 
 "use client";
-import { icons, mobileIcons } from "@/utils/constants";
+import { HeroIcons, mobileIcons } from "@/utils/constants";
 import Image from "next/image";
 import React from "react";
 
@@ -65,23 +65,27 @@ const Hero = () => {
           </p>
         </div>
         <div className="hero-icons">
-          {icons.map((icon: string, index: number) => {
-            return (
-              <span key={index} className="hero-icon">
-                <Image
-                  src={icon}
-                  height={25}
-                  width={25}
-                  alt="social icon"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = "/fallback-icon.svg"; // Fallback icon path
-                    target.alt = "Fallback Icon"; // Set a fallback alt text
-                  }}
-                />
-              </span>
-            );
-          })}
+          {HeroIcons.map((icon, index: number) => (
+            <a
+              href={icon.link}
+              key={index}
+              className="hero-icon"
+              target={icon.link.startsWith("http") ? "_blank" : "_self"}
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={icon.iconUrl}
+                height={25}
+                width={25}
+                alt={icon.altText}
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "/fallback-icon.svg";
+                  target.alt = "Fallback Icon";
+                }}
+              />
+            </a>
+          ))}
         </div>
         <div className="mobile-skew-container">
           <div className="mobile-skew"></div>

@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="flex items-stretch w-full relative overflow-hidden">
+    <div id="about" className="flex items-stretch w-full relative overflow-hidden">
       <div
         className="bg-light-black md:w-10/12 w-full
     md:px-20 px-10 md:pr-50 py-10 flex flex-col md:items-start items-center md:gap-6 gap-8"

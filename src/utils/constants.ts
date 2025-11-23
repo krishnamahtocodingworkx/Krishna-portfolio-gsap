@@ -54,6 +54,28 @@ export const icons = [
   "/github.svg",
   "/leetcode.png",
 ];
+export const HeroIcons:{iconUrl:string, altText:string, link:string}[] = [
+  {
+    iconUrl: "/email.svg",
+    altText: "Email Icon",
+    link:"mailto:krishnamahto.dev@gmail.com"
+  },
+  {
+    iconUrl: "/linkedin.png",
+    altText: "LinkedIn Icon",
+    link:"https://www.linkedin.com/in/krishna-mahto-092977294/"
+  },
+  {
+    iconUrl: "/github.svg",
+    altText: "GitHub Icon",
+    link:"https://github.com/krishnamahtocodingworkx"
+  },
+  {
+    iconUrl: "/leetcode.png",
+    altText: "LeetCode Icon",
+    link:"https://leetcode.com/u/krishnamahto/"
+  }
+]
 export const mobileIcons = [
   "/email-light.svg",
   "/linkedin-light.svg",
@@ -64,34 +86,34 @@ export const mobileIcons = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "DiveBuddies - Explore dive sites for scuba diving",
+    des: "Discover and explore the best scuba diving sites around the world with DiveBuddies.",
+    img: "/p1.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/gsap.svg", "/fm.svg"],
+    link: "https://divebuddies.app/",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
+    title: "MindCraft - Learning, Development & Growth Platform",
+    des: "A comprehensive platform offering courses, resources, and community support for personal and professional growth.",
+    img: "/p3.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/gsap.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    link: "https://mindcrafttrainings.com/",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
+    title: "Shinology (Admin Dashboard) - Car Service Booking App",
+    des: "A Car Service Booking App that allows users to schedule and manage car maintenance appointments easily.",
+    img: "/p6.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/java.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    link: "https://shinologyservice.com/",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
+    title: "PetPalz (Admin Dashboard)- Platform for Pet Care Services",
+    des: "A platform connecting pet owners with trusted pet care providers for services like grooming, walking, and sitting.",
+    img: "/p4.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    link: "https://admin.petpalz.co/",
   },
 ];

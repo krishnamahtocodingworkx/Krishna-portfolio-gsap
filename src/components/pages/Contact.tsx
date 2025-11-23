@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div className="bg-gray-background text-background h-full w-full flex flex-col justify-center items-center gap-10 md:px-[25vw] px-10 py-20">
+    <div id="contact" className="bg-gray-background text-background h-full w-full flex flex-col justify-center items-center gap-10 md:px-[25vw] px-10 py-20">
       <HeadingButton text="contact" />
       <p className="description">
         Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius

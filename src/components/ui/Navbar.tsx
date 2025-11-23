@@ -1,7 +1,25 @@
 "use client";
 import gsap from "gsap";
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
-const navLinks = ["About Me", "Skills", "Projects", "Contact Me"];
+const NavLinks = [
+  {
+    name: "About Me",
+    href: "#about",
+  },
+  {
+    name: "Skills",
+    href: "#skills",
+  },
+  {
+    name: "Projects",
+    href: "#projects",
+  },
+  {
+    name: "Contact Me",
+    href: "#contact",
+  }
+]
 const Navbar = () => {
   const navLinkRef = useRef<HTMLSpanElement[]>([]);
   const navbarRef = useRef<HTMLDivElement>(null);
@@ -67,18 +85,23 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex justify-center items-center gap-10 overflow-hidden">
-        {navLinks.map((link, index) => (
-          <span
+        {NavLinks.map((link, index) => (
+          <Link
+            href={link.href}
             key={index}
             ref={(el) => {
               if (el) {
                 navLinkRef.current[index + 1] = el;
               }
             }}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById(link.href.slice(1))?.scrollIntoView({ behavior: "smooth" });
+            }}
             className="cursor-pointer hover:text-gray-300 transition-colors duration-300 nav-link"
           >
-            {link}
-          </span>
+            {link.name}
+          </Link>
         ))}
       </div>
     </nav>
