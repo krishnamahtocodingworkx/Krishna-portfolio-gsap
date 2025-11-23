@@ -6,47 +6,94 @@ export type ExperienceCard = {
   date: string;
   responsibilities: string[];
 };
+// export const expCards: ExperienceCard[] = [
+//   {
+//     review:
+//       "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+//     imgPath: "/github-light.svg",
+//     logoPath: "/react.svg",
+//     title: "Frontend Developer",
+//     date: "January 2023 - Present",
+//     responsibilities: [
+//       "Developed and maintained user-facing features for the Hostinger website.",
+//       "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
+//       "Optimized web applications for maximum speed and scalability.",
+//     ],
+//   },
+//   {
+//     review:
+//       "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+//     imgPath: "/github-light.svg",
+//     logoPath: "/react.svg",
+//     title: "Full Stack Developer",
+//     date: "June 2020 - December 2023",
+//     responsibilities: [
+//       "Led the development of Docker's web applications, focusing on scalability.",
+//       "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
+//       "Contributed to open-source projects that were used with the Docker ecosystem.",
+//     ],
+//   },
+//   {
+//     review:
+//       "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+//     imgPath: "/github-light.svg",
+//     logoPath: "/react.svg",
+//     title: "React Native Developer",
+//     date: "March 2019 - May 2020",
+//     responsibilities: [
+//       "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
+//       "Improved app performance and user experience through code optimization and testing.",
+//       "Coordinated with the product team to implement features based on feedback.",
+//     ],
+//   },
+// ];
 export const expCards: ExperienceCard[] = [
   {
     review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+      "Krishna has shown excellent problem-solving abilities and strong ownership in frontend development. His work on building responsive interfaces and optimizing performance significantly enhanced user experience.",
     imgPath: "/github-light.svg",
     logoPath: "/react.svg",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    title: "Software Engineer",
+    date: "July 2023 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Building responsive and scalable web interfaces using React.js, Next.js, and TypeScript.",
+      "Collaborating with UI/UX teams to convert Figma designs into pixel-perfect and accessible UI.",
+      "Implementing reusable components, theme systems, dark mode, and design consistency using Material UI.",
+      "Improving app performance using lazy loading, memoization, and API optimization strategies.",
+      "Actively working on personal projects like aexyn_studio (web builder) and AI image generation apps.",
     ],
   },
   {
     review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+      "Krishna demonstrated quick learning and strong fundamentals during his training, gaining hands-on experience in frontend and basic backend development.",
     imgPath: "/github-light.svg",
-    logoPath: "/react.svg",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    logoPath: "/typescript.svg",
+    title: "Software Trainee",
+    date: "January 2023 – June 2023",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Trained in JavaScript, TypeScript, React.js, Git, API integration, and web development fundamentals.",
+      "Built mini-projects to understand component architecture, props, state management, and hooks.",
+      "Learned REST API integration using Fetch, Axios, and handled form validations using Formik and Yup.",
+      "Collaborated in small team projects to follow proper folder structure and professional coding practices.",
     ],
   },
   {
     review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+      "Krishna showcased strong full-stack learning capabilities during his trainee period, especially in building complete MERN stack applications with authentication and database integration.",
     imgPath: "/github-light.svg",
-    logoPath: "/react.svg",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    logoPath: "/nodejs.svg",
+    title: "Full Stack Trainee",
+    date: "September 2022 – December 2022",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Built full-stack apps using Node.js, Express.js, MongoDB, and React.js including JWT-based authentication.",
+      "Designed and consumed REST APIs for user authentication, task management, and data handling.",
+      "Worked with MongoDB and Mongoose for schema design, CRUD operations, and performance improvements.",
+      "Deployed applications on Render and Netlify, integrating frontend and backend successfully.",
+      "Developed the PathShala ed-tech platform prototype using MERN stack and demonstrated functional UI.",
     ],
   },
 ];
+
 
 export const icons = [
   "/email.svg",
