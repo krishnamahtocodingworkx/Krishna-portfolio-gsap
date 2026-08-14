@@ -1,4 +1,6 @@
-import Lenis from "@studio-freight/lenis";
+"use client";
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -7,42 +9,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function useLenis() {
   useEffect(() => {
-    const lenis = new Lenis(); // ✅ default config is smooth scrolling
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
+    const lenis = new Lenis({
+      autoRaf: false,
+      anchors: true,
+    });
 
     lenis.on("scroll", ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy(document.body, {
-      scrollTop(value) {
-        if (arguments.length && value !== undefined) {
-          lenis.scrollTo(value);
-        } else {
-          return lenis.scroll.instance.scroll.y;
-        }
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-      pinType: document.body.style.transform ? "transform" : "fixed",
-    });
+    const onTick = (time: number) => {
+      lenis.raf(time * 1000);
+    };
 
-    ScrollTrigger.defaults({ scroller: document.body });
-    ScrollTrigger.refresh();
+    gsap.ticker.add(onTick);
+    gsap.ticker.lagSmoothing(0);
 
     return () => {
+      gsap.ticker.remove(onTick);
+      gsap.ticker.lagSmoothing(500);
       lenis.destroy();
-      ScrollTrigger.killAll();
     };
   }, []);
 }
