@@ -48,9 +48,19 @@
 // export default Hero;
 
 "use client";
-import { HeroIcons, mobileIcons } from "@/utils/constants";
+import { HeroIcons } from "@/utils/constants";
 import Image from "next/image";
 import React from "react";
+
+const openSocialLink = (
+  event: React.MouseEvent<HTMLAnchorElement>,
+  link: string
+) => {
+  if (!link.startsWith("mailto:")) return;
+
+  event.preventDefault();
+  window.location.href = link;
+};
 
 const Hero = () => {
   return (
@@ -60,24 +70,23 @@ const Hero = () => {
         <div className="hero-name-container">
           <h1 className="hero-heading">Krishna Mahto</h1>
           <p className="hero-title">Software Engineer / FullStack Developer</p>
-          <p className="text-xs text-amber-800 font-medium italic z-50">
-            Portfolio under development
-          </p>
         </div>
         <div className="hero-icons">
-          {HeroIcons.map((icon, index: number) => (
+          {HeroIcons.map((icon) => (
             <a
               href={icon.link}
-              key={index}
+              key={icon.altText}
               className="hero-icon"
-              target={icon.link.startsWith("http") ? "_blank" : "_self"}
-              rel="noopener noreferrer"
+              target={icon.link.startsWith("http") ? "_blank" : undefined}
+              rel={icon.link.startsWith("http") ? "noopener noreferrer" : undefined}
+              onClick={(event) => openSocialLink(event, icon.link)}
             >
               <Image
                 src={icon.iconUrl}
                 height={25}
                 width={25}
                 alt={icon.altText}
+                className="pointer-events-none"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = "/fallback-icon.svg";
@@ -95,13 +104,24 @@ const Hero = () => {
         </div>
         <div className="mobile-hero-icons">
           <div className="mobil-hero-icons-container">
-            {mobileIcons.map((icon: string, index: number) => {
-              return (
-                <span key={index} className="hero-icon">
-                  <Image src={icon} height={25} width={25} alt="social icon" />
-                </span>
-              );
-            })}
+            {HeroIcons.map((icon) => (
+              <a
+                href={icon.link}
+                key={icon.altText}
+                className="hero-icon"
+                target={icon.link.startsWith("http") ? "_blank" : undefined}
+                rel={icon.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                onClick={(event) => openSocialLink(event, icon.link)}
+              >
+                <Image
+                  src={icon.mobileIconUrl}
+                  height={25}
+                  width={25}
+                  alt={icon.altText}
+                  className="pointer-events-none"
+                />
+              </a>
+            ))}
           </div>
         </div>
       </div>

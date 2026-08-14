@@ -9,6 +9,7 @@ import Experience from "./Experience";
 import Hero from "./Hero";
 import About from "./About";
 import RecentProjects from "./RecentProjects";
+import Resume from "./Resume";
 
 const HomeClient = () => {
   useLenis();
@@ -19,6 +20,7 @@ const HomeClient = () => {
       <Hero />
       {/* about section */}
       <About />
+      <Resume />
       <Skills />
       <RecentProjects />
       <Experience />

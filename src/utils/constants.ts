@@ -101,33 +101,36 @@ export const icons = [
   "/github.svg",
   "/leetcode.png",
 ];
-export const HeroIcons:{iconUrl:string, altText:string, link:string}[] = [
+export const HeroIcons: {
+  iconUrl: string;
+  mobileIconUrl: string;
+  altText: string;
+  link: string;
+}[] = [
   {
     iconUrl: "/email.svg",
+    mobileIconUrl: "/email-light.svg",
     altText: "Email Icon",
-    link:"mailto:krishnamahto.dev@gmail.com"
+    link: "mailto:krishnamahto.dev@gmail.com",
   },
   {
     iconUrl: "/linkedin.png",
+    mobileIconUrl: "/linkedin-light.svg",
     altText: "LinkedIn Icon",
-    link:"https://www.linkedin.com/in/krishna-mahto-092977294/"
+    link: "https://www.linkedin.com/in/krishna-mahto-092977294/",
   },
   {
     iconUrl: "/github.svg",
+    mobileIconUrl: "/github-light.svg",
     altText: "GitHub Icon",
-    link:"https://github.com/krishnamahtocodingworkx"
+    link: "https://github.com/krishnamahtocodingworkx",
   },
   {
     iconUrl: "/leetcode.png",
+    mobileIconUrl: "/leetcode-light.svg",
     altText: "LeetCode Icon",
-    link:"https://leetcode.com/u/krishnamahto/"
-  }
-]
-export const mobileIcons = [
-  "/email-light.svg",
-  "/linkedin-light.svg",
-  "/github-light.svg",
-  "/leetcode-light.svg",
+    link: "https://leetcode.com/u/krishnamahto/",
+  },
 ];
 
 export const projects = [

@@ -23,10 +23,7 @@ export const socialMedia = [
 ];
 const Footer = () => {
   return (
-    <footer
-      className="w-full pt-20 pb-10 md:px-20 px-5 relative overflow-hidden"
-      id="contact"
-    >
+    <footer className="w-full pt-20 pb-10 md:px-20 px-5 relative overflow-hidden">
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <Image
